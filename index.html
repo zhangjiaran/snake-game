@@ -234,8 +234,8 @@
     function render() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       drawGrid();
-      drawFood();
-      drawSnake();
+      if (food) drawFood();
+      if (snake) drawSnake();
     }
 
     function step() {
